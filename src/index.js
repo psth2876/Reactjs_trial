@@ -1,73 +1,74 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Linker from './Linker';
+import Module1 from './Module1';
 //import App from './App';
-//import reportWebVitals from './reportWebVitals';
-const name= 'prashidha';
-const date1= new Date().toLocaleDateString();
-const date= new Date();
-const time= new Date().toLocaleTimeString();
+import Netflix from './Netflix';
+import CardDetails from './CardDetails';
 
-const code = {
-  width : '1300px',
-  //height : '200px',
-  textAlign: 'center',
-  color: '#fa9191'
-}
-
-const dashboard = {
-  width : '700px',
-  textAlign: 'center',
-  color: '#fa9191'
-}
 const main_div = {
-  width : 'auto',
+  width : '100%',
   height : '100vh',
-  backgroundColor : '#778899'
+  backgroundColor : '#778899',
+  display :'flex',
+  overflow: 'hidden'
 }
 
-const css_style = { } ;
-let date_current = new Date(2020,11,6,22);
-date_current = date_current.getHours();
-let greeting = '';
-
-if(date_current>=1 && date_current <=12)
-{
-  greeting = 'Good Morning';
-  css_style.color = 'skyblue';
-}
-else if(date_current>=12 && date_current <=19)
-{
-  greeting = 'Good Afternoon';
-  css_style.color = 'grey';
-}
-else
-{
-  greeting = "Good Night";
-  css_style.color = 'black';
+const flex_div = {
+  width : '90%',
+  height : '100vh',
+  textAlign : 'center',
+  marginRight : 'auto',
+  marginLeft : 'auto',
+  //display :'flex'
 }
 
+const card_title = {
+  width : '100%',
+  height : '50px'
+}
+const card_flexs = {
+  width : '90%',
+  height : '100vh',
+  textAlign : 'center',
+  marginRight : 'auto',
+  marginLeft : 'auto',
+  display : 'flex'
+}
 
-
+console.log(CardDetails[0]);
+console.log(CardDetails[1]);
+console.log(CardDetails[2]);
+console.log(CardDetails[3]);
+console.log(CardDetails[4]);
+console.log(CardDetails[5]);
 ReactDOM.render(
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode> 
-
   <>
+  {/* <React.StrictMode>
+    <App />
+  </React.StrictMode>  */}
+  
   <div style={main_div}>
-    <div style={ code }>
-      <h1> My name is {`${name}`} </h1>
-      <p> Current date : {`${date}`} </p>
-      <p> New modified date : {date1} </p>
-      <p> New modified time : {time} </p>
-      <img src="https://picsum.photos/200/300" alt="Images" />
+        <Module1/>
+        <Linker/>
+        
     </div>
 
-    <div style={dashboard}>
-      <h1> <span style={css_style}> {greeting}  </span> Admin </h1>
+<div style={flex_div}>
+                        <div className="card_info">
+                            <h3 className="card_title" style={card_title}> A netflix Original Series </h3>
+                        </div>
+           <div className="card_flexs" style={card_flexs}>
+              <Netflix imgsrc={CardDetails[0].imgsrc} title="" link="https://netflix.com"/>
+              {/* <Netflix imgsrc="breathe.jpg" title="" link="https://netflix.com"/>
+              <Netflix imgsrc="heist.jpg" title="" link="https://netflix.com"/>
+              <Netflix imgsrc="jj.jpg" title="" link="https://netflix.com"/>
+              <Netflix imgsrc="purge.jpg" title="" link="https://netflix.com"/>
+              <Netflix imgsrc="heist.jpg" title="" link="https://netflix.com"/> */}
+              </div>
     </div>
-    </div>
+    
   </>,
   document.getElementById('root')
 );
