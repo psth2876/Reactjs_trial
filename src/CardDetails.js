@@ -29,6 +29,36 @@ const CardDetails=[
         title:"" ,
         link:"https://netflix.com"
     },
+    {
+        imgsrc:"tikka.jpg", 
+        title:"" ,
+        link:"https://netflix.com"
+    },
+    {
+        imgsrc:"chowmein.jpg", 
+        title:"" ,
+        link:"https://netflix.com"
+    },
+    {
+        imgsrc:"sch.jpg", 
+        title:"" ,
+        link:"https://netflix.com"
+    },
+    {
+        imgsrc:"cv.jfif", 
+        title:"" ,
+        link:"https://netflix.com"
+    },
+    {
+        imgsrc:"cc.jfif", 
+        title:"" ,
+        link:"https://netflix.com"
+    },
+    {
+        imgsrc:"cvv.jpg", 
+        title:"" ,
+        link:"https://netflix.com"
+    },
 ];
 
 export default CardDetails;

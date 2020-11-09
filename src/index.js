@@ -30,50 +30,95 @@ const card_title = {
 }
 const card_flexs = {
   width : '90%',
-  height : '100vh',
+  height : '50vh',
   textAlign : 'center',
   marginRight : 'auto',
   marginLeft : 'auto',
   display : 'flex'
 }
 
-console.log(CardDetails[0]);
-console.log(CardDetails[1]);
-console.log(CardDetails[2]);
-console.log(CardDetails[3]);
-console.log(CardDetails[4]);
-console.log(CardDetails[5]);
+
 ReactDOM.render(
-  <>
-  {/* <React.StrictMode>
-    <App />
-  </React.StrictMode>  */}
   
-  <div style={main_div}>
+  <>
+  {/* <div style={main_div}>
         <Module1/>
         <Linker/>
-        
-    </div>
+  </div> */}
 
-<div style={flex_div}>
-                        <div className="card_info">
-                            <h3 className="card_title" style={card_title}> A netflix Original Series </h3>
-                        </div>
-           <div className="card_flexs" style={card_flexs}>
-              <Netflix imgsrc={CardDetails[0].imgsrc} title="" link="https://netflix.com"/>
-              {/* <Netflix imgsrc="breathe.jpg" title="" link="https://netflix.com"/>
-              <Netflix imgsrc="heist.jpg" title="" link="https://netflix.com"/>
-              <Netflix imgsrc="jj.jpg" title="" link="https://netflix.com"/>
-              <Netflix imgsrc="purge.jpg" title="" link="https://netflix.com"/>
-              <Netflix imgsrc="heist.jpg" title="" link="https://netflix.com"/> */}
-              </div>
+    <div style={flex_div}>
+         <div className="card_info">
+                <h3 className="card_title" style={card_title}> A netflix Original Series </h3>
+          </div>
+
+         <div className="card_flexs" style={card_flexs}>
+              <Netflix 
+                  imgsrc={CardDetails[0].imgsrc} 
+                  title="" 
+                  link="https://netflix.com" 
+              />
+              <Netflix 
+                  imgsrc={CardDetails[1].imgsrc} 
+                  title="" 
+                  link="https://netflix.com"
+              />
+              <Netflix 
+                  imgsrc={CardDetails[2].imgsrc} 
+                  title=""
+                  link="https://netflix.com"
+              />
+              <Netflix 
+                  imgsrc={CardDetails[3].imgsrc} 
+                  title="" 
+                  link="https://netflix.com"
+              />
+              <Netflix 
+                  imgsrc={CardDetails[4].imgsrc} 
+                  title="" 
+                  link="https://netflix.com"
+              />
+              {/* <Netflix 
+                  imgsrc={CardDetails[5].imgsrc} 
+                  title="" 
+                  link="https://netflix.com"
+              /> */}
+          </div>
+
+          
+         {/* <div className="card_info">
+                <h3 className="card_title" style={card_title}> A Shardians Original Series </h3>
+          </div>
+          <div className="card_flexs" style={card_flexs}>
+              <Netflix 
+                  imgsrc={CardDetails[6].imgsrc} 
+                  title="" 
+                  link="https://netflix.com" 
+              />
+              <Netflix 
+                  imgsrc={CardDetails[7].imgsrc} 
+                  title="" 
+                  link="https://netflix.com"
+              />
+              <Netflix 
+                  imgsrc={CardDetails[8].imgsrc} 
+                  title=""
+                  link="https://netflix.com"
+              />
+              <Netflix 
+                  imgsrc={CardDetails[9].imgsrc} 
+                  title="" 
+                  link="https://netflix.com"
+              />
+              <Netflix 
+                  imgsrc={CardDetails[10].imgsrc} 
+                  title="" 
+                  link="https://netflix.com"
+              />
+             
+          </div> */}
     </div>
     
   </>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-//reportWebVitals();
